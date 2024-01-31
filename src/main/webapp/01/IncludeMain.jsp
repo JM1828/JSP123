@@ -1,5 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ include file="IncludeFile.jsp"%>
+<%@ include file="IncludeFile.jsp"%> <%-- 다른 JSP 파일 포함 --%>
 <html>
 <head>
     <title>Include 지시어</title>

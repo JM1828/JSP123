@@ -10,6 +10,7 @@
 </head>
 <body>
 <%
+    // Date와 SimpleDateFormat 클래스를 이용하여 오늘 날짜를 출력
     Date today = new Date();
     SimpleDateFormat dateFormat = new SimpleDateFormat("yyy-MM-dd");
     String todayStr = dateFormat.format(today);

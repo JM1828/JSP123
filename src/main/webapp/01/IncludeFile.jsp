@@ -3,7 +3,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%
-    LocalDate today = LocalDate.now(); // 오늘 날씨
-    LocalDateTime tomorrow = LocalDateTime.now();
+    LocalDate today = LocalDate.now(); // 오늘 날짜
+    LocalDateTime tomorrow = LocalDateTime.now(); // 내일 날짜
 %>
 

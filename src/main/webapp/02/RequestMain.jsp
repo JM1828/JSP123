@@ -16,6 +16,7 @@
 </head>
 <body>
     <h2>1. 클라이언트와 서버의 정보 읽기</h2>
+    <%--  --%>
     <a href="RequestWebInfo.jsp?eng=Hello&han=안녕">  <%-- GET 방식으로 요청 --%>
         Gat 방식 요청
     </a>
@@ -27,7 +28,7 @@
     </form>
 
     <h2>2. 클라이언트의 요청 매개변수 읽기</h2>
-    <form method="post" action="RequestParameter.jsp">
+    <form method="post" action="RequestParameter.jsp"> <%-- 다양한 input 태그 사용 --%>
         아이디 : <input type="text" name="id" value=""/><br/>
         성별 :
         <input type="radio" name="sex" value="man" />남자

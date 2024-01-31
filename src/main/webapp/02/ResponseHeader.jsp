@@ -19,7 +19,7 @@
     // add 계열의 메서드로 헤더값을 추가합니다.
     response.addDateHeader("today", add_date);
     response.addIntHeader("myNum", add_int);
-    // 바로 위에서 추가한 myNum 이라는 동일한 헤더명으로 새로운 값을 추가
+    // 바로 위에서 추가한 myNum 이라는 동일한 헤더명으로 새로운 값을 추가 (add 계열이므로 같은 헤더명으로 하나더 추가)
     response.addIntHeader("myNum", 1000); // 추가
     response.addHeader("myNume", add_str);
     // set 계열의 메서드를 사용하면 이전 값이 수정됨
@@ -32,8 +32,10 @@
 <body>
 <h2>응답 헤더 출력하기</h2>
 <%
+    // 모든 HTTP 메세지의 헤더 이름을 구함
     Collection<String> headerNames = response.getHeaderNames();
     for (String hName : headerNames) {
+        // 저장한 이름의 헤더값을 구해서 hValue에 담음
         String hValue = response.getHeader(hName);
         %>
     <li><%= hName %> : <%= hValue %></li>
@@ -43,6 +45,7 @@
 
 <h2>myNum 만 출력하기</h2>
 <%
+    // 저장한 이름의 헤더값들을 전부 반환함
     Collection<String> myNum = response.getHeaders("myNum");
     for (String num : myNum){
         %>

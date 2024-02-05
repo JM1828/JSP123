@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java"
-         isErrorPage="true" %> <%-- isErrorPage 속성에 true를 지정해줘야만 발생된 에러 내용을 그대로 넘겨받을 수 있음 --%>
+         isErrorPage="true" %>
+<%-- isErrorPage 속성에 true를 지정해줘야만 발생된 에러 내용을 그대로 넘겨받을 수 있음 --%>
 <html>
 <head>
     <meta charset="UTF-8">

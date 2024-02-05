@@ -1,4 +1,3 @@
-
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%--
     request 내장객체는 JSP 에서 가장 많이 사용된다.
@@ -9,14 +8,12 @@
     - 클라이언트가 전송한 매개변수 읽기
     - 요청 해더 및 쿠키 정보 읽기
 --%>
-
 <html>
 <head>
     <title>내장 객체 - Request</title>
 </head>
 <body>
     <h2>1. 클라이언트와 서버의 정보 읽기</h2>
-    <%--  --%>
     <a href="RequestWebInfo.jsp?eng=Hello&han=안녕">  <%-- GET 방식으로 요청 --%>
         Gat 방식 요청
     </a>
@@ -44,13 +41,9 @@
         <input type="submit" value="전송하기" />
     </form>
 
-
-
 <h2>3. HTTP 응답 해더 추가하기</h2>
 <a href="RequestHeader.jsp">
     요청 헤더 정보 읽기
 </a>
-
-
 </body>
 </html>

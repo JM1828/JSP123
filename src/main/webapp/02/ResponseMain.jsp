@@ -1,4 +1,3 @@
-
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -11,7 +10,6 @@
         - 페이지 이동(리다이렉트)
         - HTTP 헤더에 응답헤더 추가
 --%>
-
 <h2>1. 리다이렉트</h2>
 <h2>로그인 폼</h2>
 <%

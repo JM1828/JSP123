@@ -13,7 +13,6 @@
         }
     }
 %>
-
 <html>
 <head>
     <title>popupMain</title>
@@ -36,7 +35,6 @@
             padding-top: 10px;
             color: black;
         }
-
     </style>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
             integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
@@ -50,8 +48,6 @@
 
     if (popupMode.equals("on")) {
 %>
-
-
 <div id="popup">
     <h2 align="center">공지사항 팝업</h2>
     <div align="right">
@@ -65,13 +61,10 @@
 <%
     }
 %>
-
 <script>
-
         $("#closeBtn").click(function () {
             $("#popup").hide();
         });
-
 </script>
 </body>
 </html>

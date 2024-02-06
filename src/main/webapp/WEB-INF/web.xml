@@ -8,21 +8,25 @@
         <param-value>web.xml의 초기화 매개변수</param-value>
     </context-param>
     <context-param>
-        <param-name>OracleDriver</param-name>
+        <param-name>OracleDriver</param-name> <!-- 드라이버 이름 -->
         <param-value>oracle.jdbc.OracleDriver</param-value>
     </context-param>
     <context-param>
-        <param-name>OracleURL</param-name>
+        <param-name>OracleURL</param-name> <!-- 접속 URL -->
         <param-value>jdbc:oracle:thin:@localhost:1521:XE</param-value>
     </context-param>
     <context-param>
-        <param-name>OracleId</param-name>
+        <param-name>OracleId</param-name> <!-- 계정 아이디 -->
         <param-value>system</param-value>
     </context-param>
     <context-param>
-        <param-name>OraclePwd</param-name>
+        <param-name>OraclePwd</param-name> <!-- 패스워드 -->
         <param-value>oracle</param-value>
     </context-param>
+
+    <session-config>
+        <session-timeout>20</session-timeout>
+    </session-config>
 <!--    <error-page>-->
 <!--        <error-code>404</error-code>-->
 <!--        <location>/02/Exception.jsp</location>-->
@@ -37,4 +41,21 @@
 <!--        <error-code>500</error-code>-->
 <!--        <location>/02/Exception.jsp</location>-->
 <!--    </error-page>-->
+    <filter>
+<!-- filter 태그에 필터의 이름, 사용할 클래스 설정 -->
+        <filter-name>SetCharEncoding</filter-name>
+        <filter-class>org.apache.catalina.filters.SetCharacterEncodingFilter</filter-class>
+        <init-param>
+<!-- 클래스에 전달할 매개변수 설정 -->
+            <param-name>encoding</param-name>
+<!-- utf-8로 설정 -->
+            <param-value>utf-8</param-value>
+        </init-param>
+    </filter>
+<!-- <filter-mapping>태그로 요청 URL과 필터를 매핑 -->
+    <filter-mapping>
+<!-- URL 패턴을 /*로 지정 해당 웹 애플리케이션으로 들어오는 모든 요청에 SetCharEncoding 이란 이름의 필터를 적용 -->
+        <filter-name>SetCharEncoding</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
 </web-app>

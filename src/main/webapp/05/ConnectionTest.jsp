@@ -1,5 +1,5 @@
-<%@ page import="com.common.JDBCConnect" %>
-<%@ page import="com.common.DBConnPool" %> <%-- DBConnPool 임포트 추가 --%>
+<%@ page import="com.common.JDBCConnect" %> <%-- JDBConnect 클래스 임포트 추가 --%>
+<%@ page import="com.common.DBConnPool" %> <%-- DBConnPool 클래스 임포트 추가 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -7,10 +7,13 @@
     <title>JDBC</title>
 </head>
 <body>
-<h2>JDBC 연결 테스트</h2>
+<h2>JDBC 연결 테스트 1</h2>
 <%
+    // 객체를 생성한 후
   JDBCConnect jdbc1 = new JDBCConnect();
+  // 바로 닫아 자원을 해제
   jdbc1.close();
+  //session.setMaxInactiveInterval(1200);
 %>
 
 <h2>JDBC 연결 테스트 2</h2>
@@ -27,10 +30,6 @@
 <h2>JDBC 연결 테스트 3</h2>
 <%
     JDBCConnect jdbc3 = new JDBCConnect(application);
-    /*
-    * DB 관련 로직 작성
-    * 회원가입
-    * */
     jdbc3.close();
 %>
 

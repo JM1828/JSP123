@@ -8,9 +8,9 @@ public class CookieManager {
     // 1. 쿠키 생성
     // 명시한 이름, 값, 유지 기간 조건으로 새로운 쿠키를 생성
     /*
-     *@param : cName : 쿠키 이름
-     *@param : cValue : 쿠키 이름
-     *@param : cTime : 쿠키 유지기간
+     * @param : cName : 쿠키 이름
+     * @param : cValue : 쿠키 이름
+     * @param : cTime : 쿠키 유지기간
      *
      */
     public static void makeCookie(HttpServletResponse response, String cName, String cValue, int cTime) {

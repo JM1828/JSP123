@@ -8,9 +8,7 @@ public class MemberDAO extends DBConnPool {
     public MemberDAO() {
         super();
     }
-
     // CRUD
-
     // 명시한 파라미터 아이디/패스워드와 일치하는 회원 정보를 반환
     // getMemberDTO 메서드는 매개변수로 받은 아이디/패스워드와 일치하는 회원을 찾아
     // MemberDTO 형태로 반환

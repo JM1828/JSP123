@@ -9,7 +9,6 @@
 <%
   String newVar2 = "백제 온조왕";
 %>
-
 <ul>
   <li>page 영역 속성 : <%= pageContext.getAttribute("pAttr") %></li>
   <li>request 영역 속성 : <%= request.getAttribute("rAttr") %></li>

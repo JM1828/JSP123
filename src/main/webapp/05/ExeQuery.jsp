@@ -16,7 +16,7 @@
 
     // 쿼리문 생성
     // SQL문에는 인파라미터가 전혀 없음
-    String sql = "SELECT id,pass,name,regidate FROM scott.member_jsp";
+    String sql = "SELECT id,pass,name,regidate FROM member_jsp";
     // prepareStatement()가 아닌 Statement를 생성
     // 이때 이용한 메서드도 prepareStatement()가 아닌 createStatement()이다.
     Statement stmt = jdbc.con.createStatement();
@@ -38,9 +38,6 @@
     }
     //연결 종료
     jdbc.close();
-
-
-
 %>
 </body>
 </html>

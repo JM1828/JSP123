@@ -23,7 +23,6 @@
 <%--<%@include file="<%OuterPage1.jsp%>"%>--%>
 <p>외부 파일에서 선언한 변수 : <%= newVar1 %></p>
 
-
 <%-- 액션 태그 방식 --%>
 <h3>액션 태그로 페이지 포함하기</h3>
 <jsp:include page="OuterPage2.jsp"></jsp:include>

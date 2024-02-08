@@ -9,7 +9,6 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 
 public class DBConnPool {
-
     public Connection con;
     public Statement stmt;
     public PreparedStatement psmt;

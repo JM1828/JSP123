@@ -69,6 +69,55 @@ public class BoardDAO extends DBConnPool {
             return bbs; // (11)
         }
 
+        // 검색 조건에 맞는 게시물 목록을 반환 (페이징 기능 지원)
+    public List<BoardDTO> selectListPage(Map<String, Object> map) {
+        List<BoardDTO> bbs = new ArrayList<BoardDTO>(); // 결과(게시물 목록)를 담을 변수
+
+        // 쿼리문 템플릿 (1)
+        String query = " SELECT * FROM ( "
+            + " SELECT Tb.*, ROWNUM rNum FROM ("
+            + " SELECT * FROM scott.board_jsp ";
+
+        // 검색 조건 추가 (2)
+        if (map.get("searchWord") != null) {
+            query += " WHERE " + map.get("searchField") + " "
+                    + " LIKE '%" + map.get("searchWord") + "%' ";
+        }
+        query += " ORDER BY num desc"
+            + "     ) Tb "
+            + " ) "
+            + " WHERE rNUM BETWEEN ? AND ?"; // (3)
+
+        try {
+            // 쿼리문 완성 (4)
+            psmt = con.prepareStatement(query);
+            psmt.setString(1, map.get("start").toString());
+            psmt.setString(2, map.get("end").toString());
+
+            // 쿼리문 실행 (5)
+            rs = psmt.executeQuery();
+
+            while (rs.next()) {
+                // 한 행(게시물 하나)의 데이터를 DTO에 저장
+                BoardDTO dto = new BoardDTO();
+                dto.setNum(rs.getString("num"));
+                dto.setTitle(rs.getString("title"));
+                dto.setContent(rs.getString("content"));
+                dto.setId(rs.getString("id"));
+                dto.setPostdate(rs.getDate("postdate"));
+                dto.setVisitcount(rs.getString("visitcount"));
+
+                // 반환할 결과 목록에 게시물 추가
+                bbs.add(dto);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("selectList 오류발생");
+        }
+        // 목록 반환
+        return bbs;
+    }
+
         // 게시글 작성
     public int insertWrite(BoardDTO dto) {
         int result = 0;

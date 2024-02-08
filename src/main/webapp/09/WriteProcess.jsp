@@ -16,7 +16,7 @@
   //int iResult = dao.insertWrite(dto);
   int iResult = 0;
   for (int i = 0; i <= 100; i++){
-    dto.setTitle(title + " -" + i);
+    dto.setTitle(title + "-" + i);
     iResult = dao.insertWrite(dto);
   }
 

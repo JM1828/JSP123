@@ -18,10 +18,10 @@
 <h2>클래스명을 통해 정적 메소드 호출</h2>
 ${MyELClass.showGugudan(9)} <%--(1)--%>
 
-<%--<h2>TLD 파일을 사용해 정적메소드 호출</h2>--%>
-<%--<ul>--%>
-<%--    <li>mytag:isnumber("100") => ${mytag:isNumber("100")}</li>--%>
-<%--    <li>mytag:isnumber("이백") => ${mytag:isNumber("이백")}</li>--%>
-<%--</ul>--%>
+<h2>TLD 파일을 사용해 정적메소드 호출</h2>
+<ul>
+    <li>mytag:isnumber("100") => ${mytag:isNumber("100")}</li>
+    <li>mytag:isnumber("이백") => ${mytag:isNumber("이백")}</li>
+</ul>
 </body>
 </html>

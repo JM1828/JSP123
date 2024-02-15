@@ -56,7 +56,7 @@
         <table border="1" width="90%">
             <tr>
                 <td align="center">
-                    <select name="searchRiled"> <%-- (3) --%>
+                    <select name="searchField"> <%-- (3) --%>
                         <option value="title">제목</option>
                         <option value="content">내용</option>
                     </select>

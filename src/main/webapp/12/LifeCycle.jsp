@@ -5,7 +5,7 @@
     <title>LifeCycle</title>
 </head>
 <body>
-<script>
+<script> // 폼ㄱ밧을 전송해주는 자바스크립트 코드
   function requestAction(frm, met) {
     if (met == 1){
       frm.method = 'get';
